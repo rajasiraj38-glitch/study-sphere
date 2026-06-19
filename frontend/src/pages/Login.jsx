@@ -19,7 +19,7 @@ function Login() {
       const res = await api.post('/auth/login', { email, password });
       if (res.data.success) {
         login(res.data.user);
-        navigate('/'); // Redirect to home
+        navigate('/hub'); // Redirect to home
       }
     } catch (err) {
       setError(err.response?.data?.msg || 'An error occurred during login.');

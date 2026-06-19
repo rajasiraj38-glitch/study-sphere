@@ -29,7 +29,7 @@ function Signup() {
       if (res.data.success) {
         // Log them in immediately
         login(res.data.user);
-        navigate('/');
+        navigate('/hub');
       }
     } catch (err) {
       setError(err.response?.data?.msg || 'Failed to create account.');
